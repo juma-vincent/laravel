@@ -219,3 +219,8 @@ use App\Models\Post;
 //     $posts = Post::onlyTrashed()->where('is_featured', 0)->get();
 //     return $posts;
 // });
+
+//RESTORING TRASHED RECORDS
+Route::get('/restore', function(){
+    Post::withTrashed()->restore(); // retrieving all posts including trashhed after restoring trashed
+});
