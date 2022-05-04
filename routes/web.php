@@ -234,6 +234,6 @@ use App\Models\User;
 
 
 // ONE TO ONE RELATIONSHIP
-Route::get('/user/{id}/post', function($id){
-    echo User::find($id)->post;
-});
+// Route::get('/user/{id}/post', function($id){
+//     echo User::find($id)->post;
+// });
