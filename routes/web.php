@@ -242,3 +242,8 @@ use App\Models\User;
 // Route::get('/post/{id}/user', function($id){
 //     return Post::find($id)->user;
 // });
+
+// ONE TO MANY RELATIONSHIP
+// Route::get('/user/{id}/posts', function($id){
+//     return $posts = User::find($id)->posts;
+// });
