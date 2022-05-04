@@ -237,3 +237,8 @@ use App\Models\User;
 // Route::get('/user/{id}/post', function($id){
 //     echo User::find($id)->post;
 // });
+
+//INVERSE OF THE ONE-ONE RELATIONSHIP
+// Route::get('/post/{id}/user', function($id){
+//     return Post::find($id)->user;
+// });
