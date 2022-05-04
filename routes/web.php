@@ -205,7 +205,7 @@ use App\Models\Post;
 //Then migrate the changes
 
 // Route::get('/softdelete', function(){
-//     Post::find(6)->delete();
+//     Post::find(1)->delete();
 // });
 
 // After implementing sofDelete, when we use the delete() method on data, it wont appear througth all() method and also
@@ -221,6 +221,12 @@ use App\Models\Post;
 // });
 
 //RESTORING TRASHED RECORDS
-Route::get('/restore', function(){
-    Post::withTrashed()->restore(); // retrieving all posts including trashhed after restoring trashed
-});
+// Route::get('/restore', function(){
+//    Post::withTrashed()->restore(); // retrieving all posts including trashhed after restoring trashed
+// });
+
+//DELETING A RECORD PERMANENTLY
+// Route::get('/forcedelete', function(){
+//     Post::onlyTrashed()->where('id', 6)->forceDelete();
+    
+// });
