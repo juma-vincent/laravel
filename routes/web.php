@@ -171,8 +171,9 @@ use App\Models\User;
     Route::get('/insertdata', function(){
             $post = new Post;
         
-            $post->title="React JS";
-            $post->content = "A Javscript Library";
+            $post->title="Vue Js";
+            $post->content = "A JS front end framework";
+            $post->user_id = 1;
         
             $post->save();
         
