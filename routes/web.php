@@ -83,6 +83,7 @@ use App\Http\Controllers\UserController;
 // ELOQUENT/ORM
 // -------------------------------
 use App\Models\Post;
+use App\Models\User;
 
 // READING ALL DATA
 // -------------------------------
@@ -170,8 +171,8 @@ use App\Models\Post;
     Route::get('/insertdata', function(){
             $post = new Post;
         
-            $post->title="Temporary1";
-            $post->content = "Temporary content1.";
+            $post->title="React JS";
+            $post->content = "A Javscript Library";
         
             $post->save();
         
@@ -230,3 +231,9 @@ use App\Models\Post;
 //     Post::onlyTrashed()->where('id', 6)->forceDelete();
     
 // });
+
+
+// ONE TO ONE RELATIONSHIP
+Route::get('/user/{id}/post', function($id){
+    echo User::find($id)->post;
+});
