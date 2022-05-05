@@ -253,11 +253,20 @@ use App\Models\Role;
 
 //MANY TO MANY RELATIONSHIP
 //Finding roles of a given user
-Route::get('/user/{id}/roles', function($id){
-    echo User::find($id)->roles;
-});
+// Route::get('/user/{id}/roles', function($id){
+//     echo User::find($id)->roles;
+// });
 
 //Finding users on a given role
-Route::get('/role/{id}/users', function($id){
-   echo Role::find($id)->users;
-});
+// Route::get('/role/{id}/users', function($id){
+//    echo Role::find($id)->users;
+// });
+
+//ACCESSING THE PIVOT TABLE
+// Route::get('/user/{id}/role/pivot', function($id){
+//     $user = User::find($id);
+
+//     foreach($user->roles as $role){
+//         echo 'Created at ' . $role->pivot->created_at . ' Updated at ' . $role->pivot->updated_at;
+//     }
+// });
