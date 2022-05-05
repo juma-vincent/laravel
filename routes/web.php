@@ -84,6 +84,7 @@ use App\Http\Controllers\UserController;
 // -------------------------------
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Role;
 
 // READING ALL DATA
 // -------------------------------
@@ -248,3 +249,15 @@ use App\Models\User;
 // Route::get('/user/{id}/posts', function($id){
 //     return $posts = User::find($id)->posts;
 // });
+
+
+//MANY TO MANY RELATIONSHIP
+//Finding roles of a given user
+Route::get('/user/{id}/roles', function($id){
+    echo User::find($id)->roles;
+});
+
+//Finding users on a given role
+Route::get('/role/{id}/users', function($id){
+   echo Role::find($id)->users;
+});
