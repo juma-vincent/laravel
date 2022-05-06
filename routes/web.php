@@ -85,6 +85,7 @@ use App\Http\Controllers\UserController;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Role;
+use App\Models\Project;
 
 // READING ALL DATA
 // -------------------------------
@@ -269,4 +270,11 @@ use App\Models\Role;
 //     foreach($user->roles as $role){
 //         echo 'Created at ' . $role->pivot->created_at . ' Updated at ' . $role->pivot->updated_at;
 //     }
+// });
+
+
+//HAS MANY THROUGH RELATIONSHIP
+// Route::get('/project/{id}/tasks', function($id){
+//     $projectasks= Project::find($id)->tasks;
+//     return $projectasks;
 // });
