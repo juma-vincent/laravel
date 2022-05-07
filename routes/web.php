@@ -170,17 +170,7 @@ use App\Models\Project;
     //     return "The deleted post is: $post";
     // });
 
-    Route::get('/insertdata', function(){
-            $post = new Post;
-        
-            $post->title="Vue Js";
-            $post->content = "A JS front end framework";
-            $post->user_id = 1;
-        
-            $post->save();
-        
-        });
-
+    
     // 2.Using destroy() method
     // Route::get('/delete2', function(){
     //     Post::destroy(11);
@@ -278,3 +268,4 @@ use App\Models\Project;
 //     $projectasks= Project::find($id)->tasks;
 //     return $projectasks;
 // });
+
