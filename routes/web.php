@@ -86,6 +86,9 @@ use App\Models\Post;
 use App\Models\User;
 use App\Models\Role;
 use App\Models\Project;
+use App\Models\Image;
+use App\Models\Video;
+use App\Models\Tag;
 
 // READING ALL DATA
 // -------------------------------
@@ -269,3 +272,33 @@ use App\Models\Project;
 //     return $projectasks;
 // });
 
+
+//POLYMORPHIC RELATIONSHIP
+    //ONE TO ONE POLYMORPHIC RELATIONSHIP
+    // Route::get('/post/{id}/image', function($id){
+        
+    //    return Post::find($id)->image;
+
+    // });
+
+    // Route::get('/image/{id}/imageable', function($id){
+    //     return Image::find($id)->imageable;
+    // });
+
+    //ONE TO MANY POLYMORPHIC RELATIONSHIP
+    // Route::get('/post/{id}/comments', function($id){
+    //     return Post::find($id)->comments;
+    // });
+
+    //MANY TO MANY POLYMORPHIC RELATIONSHIP
+
+    // Route::get('/video/{id}/tags', function($id){
+    //     return Video::find($id)->tags;
+    // });
+
+    // Route::get('/tag/{id}/videos', function($id){
+    //     $tag =Tag::find($id);
+    //     foreach($tag->videos as $video){
+    //         echo $video->name; 
+    //     }
+    // });
