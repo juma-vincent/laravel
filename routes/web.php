@@ -302,3 +302,15 @@ use App\Models\Tag;
     //         echo $video->name; 
     //     }
     // });
+
+// //ATTACHING ROLES
+// Route::get('/user/{id}/attach', function($id){
+//     $user = User::findOrFail($id);
+//     $user->roles()->attach(3);
+// });
+
+//DETACHING ROLES
+// Route::get('/user/{id}/detach', function($id){
+//     $user = User::findOrFail($id);
+//     $user->roles()->detach(3);
+// });
